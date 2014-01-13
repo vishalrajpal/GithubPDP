@@ -13,3 +13,19 @@
   
 (addLargeTwo 1 2 3)
 (addLargeTwo 5 2 4)
+
+(define (addLargeTwoMin a b c)
+    (cond
+      [(= ( min a b c) a) (+ b c)]
+      [(= ( min a b c) b) (+ c a)]
+      [(= ( min a b c) c) {+ a b}])
+  )
+
+(addLargeTwoMin 11 2 9)
+
+(define (addLargeTwoMax a b c)
+  (cond 
+    [(= (max a b c) a ) (+ a (max b c))]
+    [(= (max a b c) b ) (+ b (max a c))]
+    [(= (max a b c) c ) (+ c (max a b))]))
+(addLargeTwoMax 1 12 3)
